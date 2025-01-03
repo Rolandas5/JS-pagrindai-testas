@@ -193,47 +193,47 @@ mažoji raidė, skaičius, specialusis simbolis. Visi slaptažodžio
 simboliai privalo būti atsitiktiniai ir atsitiktine tvarka.
 */
 
-function passwordGenerator(len) {
-  // didžiosios raidės
-  const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  // mažosios raidės
-  const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-  // skaičiai
-  const number = '0123456789';
-  // simboliai
-  const punctuation = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
-  // visi simboliai
-  const allChars = upperCase + lowerCase + number + punctuation;
+// function passwordGenerator(len) {
+//   // didžiosios raidės
+//   const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//   // mažosios raidės
+//   const lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+//   // skaičiai
+//   const number = '0123456789';
+//   // simboliai
+//   const punctuation = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
+//   // visi simboliai
+//   const allChars = upperCase + lowerCase + number + punctuation;
 
-  let password = '';
+//   let password = '';
 
-  // parenkama didžioji raidė
-  password += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
-  // parenkama mažoji raidė
-  password += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
-  // parenkamas skaičius
-  password += number.charAt(Math.floor(Math.random() * number.length));
-  // parenkamas simbolis
-  password += punctuation.charAt(
-    Math.floor(Math.random() * punctuation.length)
-  );
+//   // parenkama didžioji raidė
+//   password += upperCase.charAt(Math.floor(Math.random() * upperCase.length));
+//   // parenkama mažoji raidė
+//   password += lowerCase.charAt(Math.floor(Math.random() * lowerCase.length));
+//   // parenkamas skaičius
+//   password += number.charAt(Math.floor(Math.random() * number.length));
+//   // parenkamas simbolis
+//   password += punctuation.charAt(
+//     Math.floor(Math.random() * punctuation.length)
+//   );
 
-  // užpildo atsitiktiniais simboliais iš visų kategorijų
-  while (password.length < len) {
-    password += allChars.charAt(Math.floor(Math.random() * allChars.length));
-  }
+//   // užpildo atsitiktiniais simboliais iš visų kategorijų
+//   while (password.length < len) {
+//     password += allChars.charAt(Math.floor(Math.random() * allChars.length));
+//   }
 
-  // suformuoja slaptažodį su simboliais atsitiktine tvarka
-  password = password
-    .split('')
-    .sort(() => Math.random() - 0.5)
-    .join('');
+//   // suformuoja slaptažodį su simboliais atsitiktine tvarka
+//   password = password
+//     .split('')
+//     .sort(() => Math.random() - 0.5)
+//     .join('');
 
-  // užtikrina, kad slaptažodis atitiktų nurodytą ilgį
-  return password.substr(0, len);
-}
+//   // užtikrina, kad slaptažodis atitiktų nurodytą ilgį
+//   return password.substr(0, len);
+// }
 
-console.log(passwordGenerator(12));
+// console.log(passwordGenerator(12));
 
 //
 //
